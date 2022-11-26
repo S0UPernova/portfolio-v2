@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.scss'
 
 export default function Home() {
   return (
-    <div className={`${styles.container} ${styles.textColor}`}>
+    <div className={styles.container}>
       <Head>
         <title>Michael Kielpinski - Portfolio</title>
         <meta name="description" content="Portfolio site for Michael Kielpinski" />
