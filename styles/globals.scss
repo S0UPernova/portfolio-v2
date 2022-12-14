@@ -48,9 +48,6 @@ ul {
 	} 
 }
 
-
-
-
 a {
   color: rgb(0, 0, 189);
   text-decoration: none;
@@ -81,7 +78,7 @@ a {
     linear-gradient(to left,
       rgba(0, 0, 0, 0),
       black,
-      rgba(0, 0, 0, 0)) 27 space;
+      rgba(0, 0, 0, 0)) 27;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -103,6 +100,6 @@ a {
       linear-gradient(to left,
         rgba(0, 0, 0, 0),
         white,
-        rgba(0, 0, 0, 0)) 27 space;
+        rgba(0, 0, 0, 0)) 27;
   }
 }

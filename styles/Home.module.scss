@@ -24,7 +24,9 @@
 .list {
   margin-top: -1rem;
 	margin-bottom: 2rem;
+  list-style: none;
 }
+
 
 .link {
   margin-top: 2rem;
@@ -53,7 +55,7 @@
       linear-gradient(to left,
         rgba(0, 0, 0, 0),
         black,
-        rgba(0, 0, 0, 0)) 27 space;
+        rgba(0, 0, 0, 0)) 27;
   }
 
   .section {
@@ -106,7 +108,7 @@
       linear-gradient(to left,
         rgba(0, 0, 0, 0),
         white,
-        rgba(0, 0, 0, 0)) 27 space;
+        rgba(0, 0, 0, 0)) 27;
     }
   }
 
