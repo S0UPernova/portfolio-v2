@@ -18,17 +18,20 @@ export default function Home() {
             <a href="https://s0upernova.github.io/tic-tac-toe" target={'_blank'}>Tic-Tac-Toe: Jaggy Edition</a>
           </p>
           <div className={styles.box}>
-            <iframe loading="lazy" title='Tic-Tac-Toe' className={styles.frame} src="https://s0upernova.github.io/tic-tac-toe">
+            <iframe
+              loading="lazy"
+              title='Tic-Tac-Toe'
+              className={styles.frame}
+              src="https://s0upernova.github.io/tic-tac-toe">
             </iframe>
           </div>
-          <h3><TypedText timeout={500} duration={500} curserStyle={"blink"}>About this project</TypedText></h3>
-          <p>
-
-            <TypedText timeout={1500} duration={2000} curserStyle={"blink"}>
-              This was made using react, and started with useState for state management,
-              but later converted it to useReducer
-            </TypedText>
-          </p>
+          <TypedText timeout={500} duration={500} curserStyle={"blink"} tag="h2">
+            About this project
+          </TypedText>
+          <TypedText timeout={1500} duration={2000} curserStyle={"blink"} tag="p">
+            This was made using react, and started with useState for state management,
+            but later converted it to useReducer
+          </TypedText>
           <p>
             <i>You can check out the source code on </i>
             <a href="https://github.com/S0UPernova/tic-tac-toe" target={'_blank'}>GitHub</a>
@@ -42,28 +45,39 @@ export default function Home() {
             <a href="https://s0upernova.github.io/raycasting" target={'_blank'}>Raycasting</a>
           </p>
           <div className={styles.box}>
-            <iframe loading="lazy" title='Raycasting' className={styles.frame} src="https://s0upernova.github.io/raycasting">
+            <iframe
+              loading="lazy"
+              title='Raycasting'
+              className={styles.frame}
+              src="https://s0upernova.github.io/raycasting">
             </iframe>
           </div>
-          <h3><TypedText timeout={500} duration={500} curserStyle={"blink"}>About this project</TypedText></h3>
-          <p>
-            <TypedText timeout={1500} duration={3500} curserStyle={"blink"}>
-              This was made using typescript while following a tutorial in plain javascript,
-              they used a library that I had trouble using so I ended up needing to make some functions myself
-            </TypedText>
-          </p>
-          <h4><TypedText timeout={5000} duration={500} curserStyle={"blink"}>Here are a few examles</TypedText></h4>
+          <TypedText timeout={500} duration={500} curserStyle={"blink"} tag="h2">
+            About this project
+          </TypedText>
+          <TypedText timeout={1500} duration={3500} curserStyle={"blink"} tag="p">
+            This was made using typescript while following a tutorial in plain javascript,
+            they used a library that I had trouble using,
+            so I ended up needing to make some functions myself
+          </TypedText>
+          <TypedText timeout={5000} duration={500} curserStyle={"blink"} tag="h3">
+            Here are a few examles
+          </TypedText>
           <ul className={styles.list}>
-            <li><TypedText timeout={6000} duration={500} curserStyle={"blink"}>getting the distance between two points</TypedText></li>
-            <li><TypedText timeout={7000} duration={500} curserStyle={"blink"}>converting degrees to radians</TypedText></li>
-            <li></li>
-          </ul>
-          <p>
-            <TypedText timeout={8000} duration={3000} curserStyle={"blink"}>though it wasn't in the tutorial I also made a function to draw the parts of the wall between the points that hit it,
-              instead of the whole wall if any hit,
-              though there is the issue that it does not draw the walls between those rays if they don't hit the same wall
+            <TypedText timeout={6000} duration={500} curserStyle={"blink"} tag="li">
+              getting the distance between two points
             </TypedText>
-          </p>
+            <TypedText timeout={7000} duration={500} curserStyle={"blink"} tag="li">
+              converting degrees to radians
+            </TypedText>
+          </ul>
+          <TypedText timeout={8000} duration={3000} curserStyle={"blink"} tag="p">
+            though it wasn't in the tutorial I also made a function to draw the
+            parts of the wall between the points that hit it,
+            instead of the whole wall if any hit,
+            though there is the issue that it does not draw the walls between
+            those rays if they don't hit the same wall
+          </TypedText>
           <p className={styles.link}>
             <i>You can check out the source code on </i>
             <a href="https://github.com/S0UPernova/raycasting" target={'_blank'}>GitHub</a>
@@ -78,29 +92,38 @@ export default function Home() {
           </p>
           <div className={styles.box}>
             {/* // todo get cookies working in this */}
-            <iframe sandbox="allow-same-origin allow-scripts allow-forms" loading="lazy" title='Todo-App' className={styles.frame} src="https://todo-app.me">
+            <iframe
+              loading="lazy"
+              title='Todo-App'
+              className={styles.frame}
+              src="https://todo-app.me">
             </iframe>
           </div>
-          <h3><TypedText timeout={500} duration={500} curserStyle={"blink"}>About this project</TypedText></h3>
-          <p>
-            <TypedText timeout={1500} duration={3500} curserStyle={"blink"}>
-              FYI: login does not work in the preview, because the cookie does not get set.
-              the frontend is in react, and the backend is an api made with Ruby on Rails
-            </TypedText>
-          </p>
-          <h4><TypedText timeout={5000} duration={500} curserStyle={"blink"}>Here are a few highlights</TypedText></h4>
+          <TypedText timeout={500} duration={500} curserStyle={"blink"} tag="h3">
+            About this project
+          </TypedText>
+          <TypedText timeout={1500} duration={3500} curserStyle={"blink"} tag="p">
+            FYI: login does not work in the preview, because the cookie does not get set.
+            the frontend is in react, and the backend is an api made with Ruby on Rails
+          </TypedText>
+          <TypedText timeout={5000} duration={500} curserStyle={"blink"} tag="h3">
+            Here are a few highlights
+          </TypedText>
           <ul className={styles.list}>
-            <li><TypedText timeout={6000} duration={500} curserStyle={"blink"}>the api is on an aws ec2 instance</TypedText></li>
-            <li><TypedText timeout={7000} duration={500} curserStyle={"blink"}>the frontend is on aws amplify with ci/cd</TypedText></li>
-            <li></li>
-          </ul>
-          <p>
-            <TypedText timeout={8000} duration={4000} curserStyle={"blink"}>
-              This application presented quite a few challenges, which were a good learning experience.
-              For instance this was the first time I deployed a rails app without it being on heroku, and the saying rang pretty true,
-              that one of the hardest things to do with ruby on rails is installing it.
+            <TypedText timeout={6000} duration={500} curserStyle={"blink"} tag="li">
+              the api is on an aws ec2 instance
             </TypedText>
-          </p>
+            <TypedText timeout={7000} duration={500} curserStyle={"blink"} tag="li">
+              the frontend is on aws amplify with ci/cd
+            </TypedText>
+          </ul>
+          <TypedText timeout={8000} duration={4000} curserStyle={"blink"} tag="p">
+            This application presented quite a few challenges,
+            which were a good learning experience.
+            For instance this was the first time I deployed a rails app without it being on heroku,
+            and the saying rang pretty true,
+            that one of the hardest things to do with ruby on rails is installing it.
+          </TypedText>
           <p className={styles.link}>
             <i>You can check out the source code </i>
             <a href="https://github.com/S0UPernova/todo_app" target={'_blank'}>Frontend</a>
