@@ -9,43 +9,53 @@ body {
 
 
 @import url(https://fonts.googleapis.com/css?family=EB+Garamond);
+
 h1,
 h2,
 h3,
 h4,
 h5,
-.btn{
-	letter-spacing: 1.2pt;
+.btn {
+  letter-spacing: 1.2pt;
   font-weight: lighter;
 }
-*{
-	font-family: Garamond, EB Garamond, Georgia, serif;
+
+* {
+  font-family: Garamond, EB Garamond, Georgia, serif;
 }
+
 p {
-	letter-spacing: 1pt;
-	line-height: 16pt;
-	max-width: 80ch;
-	font-family: Georgia,Times,Times New Roman,serif;
+  letter-spacing: 1pt;
+  line-height: 16pt;
+  max-width: 80ch;
+  font-family: Georgia, Times, Times New Roman, serif;
 }
+
 h1 {
-	font-size: 1.5rem;
-	line-height: 30pt;
+  font-size: 1.5rem;
+  line-height: 30pt;
 }
 
 h3 {
-	font-size: 1.3rem;
+  font-size: 1.3rem;
 }
+
 h4 {
-	font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 ul {
-	li {
-		letter-spacing: 0.6pt;
-		line-height: 16pt;
-		margin-left: 2rem;
-    font-family: Georgia, serif;
-	} 
+  li {
+    &:not(:last-child) {
+      margin-bottom: .5rem;
+    }
+
+    letter-spacing: 0.6pt;
+    line-height: 16pt;
+    margin-left: 2rem;
+    font-family: Georgia,
+    serif;
+  }
 }
 
 a {
