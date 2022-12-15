@@ -1,12 +1,7 @@
-import { BlockList } from 'net'
 import Head from 'next/head'
 import styles from '../styles/Home.module.scss'
 import TypedText from "../components/typedText"
-// import { useIsVisible } from "../hooks/useIsVisible"
-// import { useRef } from 'react'
 export default function Home() {
-  // const ref = useRef();
-  // const isVisible = useIsVisible(ref);
   return (
     <div className={styles.container}>
       <Head>
@@ -15,6 +10,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" /> {/* // todo add custom icon */}
       </Head>
       <main className={styles.main}>
+
+        {/* //* Tic-Tac-Toe */}
         <section className={styles.section}>
           <p>
             <i>This is a live preview for </i>
@@ -38,6 +35,7 @@ export default function Home() {
           </p>
         </section>
 
+        {/*//* Raycasting */}
         <section className={styles.section}>
           <p>
             <i>This is a live preview for </i>
@@ -72,7 +70,7 @@ export default function Home() {
           </p>
         </section>
 
-
+        {/* //* Todo-App && Todo-Api */}
         <section className={styles.section}>
           <p>
             <i>This is a live preview for </i>
@@ -80,13 +78,13 @@ export default function Home() {
           </p>
           <div className={styles.box}>
             {/* // todo get cookies working in this */}
-            <iframe loading="lazy" title='Todo-App' className={styles.frame} src="https://todo-app.me">
+            <iframe sandbox="allow-same-origin allow-scripts allow-forms" loading="lazy" title='Todo-App' className={styles.frame} src="https://todo-app.me">
             </iframe>
           </div>
           <h3><TypedText timeout={500} duration={500} curserStyle={"blink"}>About this project</TypedText></h3>
           <p>
             <TypedText timeout={1500} duration={3500} curserStyle={"blink"}>
-              FYI: login does not work in the preview, because the cookie does not set.c
+              FYI: login does not work in the preview, because the cookie does not get set.
               the frontend is in react, and the backend is an api made with Ruby on Rails
             </TypedText>
           </p>
