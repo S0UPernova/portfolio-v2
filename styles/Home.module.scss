@@ -22,15 +22,13 @@
 }
 
 .list {
-  margin-top: -1rem;
-	margin-bottom: 2rem;
+  // margin-top: -1rem;
+  // margin-bottom: 2rem;
   list-style: none;
 }
 
 
-.link {
-  margin-top: 2rem;
-}
+
 
 .container {
   width: clamp(500px, 60%, 100%);
@@ -47,20 +45,6 @@
   justify-content: center;
   align-items: center;
   gap: 4rem;
-
-  .section:not(:first-child) {
-    border-top: 1px solid black;
-    padding-top: 3rem;
-    border-image:
-      linear-gradient(to left,
-        rgba(0, 0, 0, 0),
-        black,
-        rgba(0, 0, 0, 0)) 27;
-  }
-
-  .section {
-    width: 100%;
-  }
 }
 
 .grid {
@@ -77,6 +61,66 @@
   margin-left: 0.5rem;
 }
 
+.section {
+  grid-area: section;
+  // display: grid;
+  width: clamp(20ch, 100%, 120ch);
+}
+
+.aside {
+  grid-area: aside;
+  width: clamp(20ch, 100%, 120ch);
+  // margin-top: 3.5rem;
+}
+
+.figure {
+  // width: 100%;
+  grid-area: figure;
+}
+
+.preview {
+  grid-area: preview;
+  width: 100%;
+}
+
+.link {
+  grid-area: link;
+  // margin-top: 2rem;
+}
+
+.article {
+  width: 100%;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    "preview preview preview preview"
+    "figure figure figure figure"
+    "section section aside aside"
+    "link link link link"
+  ;
+
+  &:not(:first-child) {
+    border-top: 1px solid black;
+    padding-top: 3rem;
+    border-image:
+      linear-gradient(to left,
+        rgba(0, 0, 0, 0),
+        black,
+        rgba(0, 0, 0, 0)) 27;
+  }
+}
+@media (max-width: 1200px) {
+  .article {
+    grid-template-areas:
+      "preview preview preview preview"
+      "figure figure figure figure"
+      "section section section section"
+      "aside aside aside aside"
+      "link link link link"
+    ;
+  }
+}
 @media (max-width: 600px) {
   .grid {
     width: 100%;
@@ -86,29 +130,33 @@
 
 // colors light/dark
 @media (prefers-color-scheme: dark) {
+
   .card,
   .code {
     background: #111;
   }
+
   .logo img {
     filter: invert(1);
   }
-  .box
-  // .frame
-   {
-    box-shadow:  0 0 0 rgba(88, 88, 88, 0.1), 0 0 0 1px rgb(87, 86, 86),
-    0.3em 0.3em 1em rgba(95, 95, 95, 0.3);
-  //   border-color: lightskyblue;
+
+  .box // .frame
+
+    {
+    box-shadow: 0 0 0 rgba(88, 88, 88, 0.1), 0 0 0 1px rgb(87, 86, 86),
+      0.3em 0.3em 1em rgba(95, 95, 95, 0.3);
+    //   border-color: lightskyblue;
   }
+
   .main {
-    .section:not(:first-child) {
+    .article:not(:first-child) {
       border-top: 1px solid black;
       padding-top: 3rem;
       border-image:
-      linear-gradient(to left,
-        rgba(0, 0, 0, 0),
-        white,
-        rgba(0, 0, 0, 0)) 27;
+        linear-gradient(to left,
+          rgba(0, 0, 0, 0),
+          white,
+          rgba(0, 0, 0, 0)) 27;
     }
   }
 

@@ -49,7 +49,7 @@ function TypedText({
   }, [hasBeenSeen])
 
   return (
-    <Tag className={styles.element} ref={ref}>
+    <Tag ref={ref}>
       {`${isVisible && !hasBeenSeen ? setHasBeenSeen(true) : ""}`}
       {`${revealedLetters === 0 && placeHolder != false ? `${placeHolder}` : ""}`}
       {`${children.substring(0, revealedLetters)}`}
