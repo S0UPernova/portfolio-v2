@@ -1,5 +1,5 @@
-import { useState, useEffect, Ref, RefObject } from "react"
-export function useIsVisible(ref: RefObject<HTMLSpanElement> | null) {
+import { useState, useEffect, RefObject } from "react"
+export function useIsVisible(ref: RefObject<Element> | null) {
   const [isIntersecting, setIntersecting] = useState(false);
 
   useEffect((): () => void => {

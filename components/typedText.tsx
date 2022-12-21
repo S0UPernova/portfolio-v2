@@ -36,17 +36,30 @@ function TypedText({
 
   useEffect(() => {
     let interval: NodeJS.Timer
-    if (hasBeenSeen) {
+    const setter = () => {
+      if (revealedLetters <= children.length) {
+        console.log(`count is ${revealedLetters}`)
+        setRevealedLetters(l => l + 1)
+      }
+    }
+    if (hasBeenSeen && revealedLetters === 0) {
       setTimeout(() => {
         if (curserStyle !== "none") {
           setShowCurser(true)
         }
-        interval = setInterval(() => setRevealedLetters(l => l + 1), dur ? dur : delay)
-        if (revealedLetters === children.length) clearInterval(interval)
+        interval = setInterval(() => {
+          setter()
+        }, dur ? dur : delay)
       }, timeout)
+
+    } else if (hasBeenSeen && revealedLetters < children.length) {
+      interval = setInterval(() => {
+        setter()
+      }, dur ? dur : delay)
     }
+
     return () => clearInterval(interval)
-  }, [hasBeenSeen])
+  }, [hasBeenSeen, revealedLetters]) // seems to need revealedLetters to have updated state for the logic
 
   return (
     <Tag ref={ref}>
