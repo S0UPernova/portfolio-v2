@@ -1,163 +1,93 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.scss'
 import TypedText from "../components/typedText"
+import styles from '../styles/home.module.scss'
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
-        <title>Michael Kielpinski - Portfolio</title>
-        <meta name="description" content="Portfolio site for Michael Kielpinski" />
+        <title>Michael Kielpinski - Home</title>
+        <meta name="description" content="Michael Kielpinski Portfolio site homepage" />
         <link rel="icon" href="/favicon.ico" /> {/* // todo add custom icon */}
       </Head>
-      <main className={styles.main}>
-
-        {/* //* Tic-Tac-Toe */}
-        <article className={styles.article}>
-          <p className={styles.preview}>
-            <i>This is a live preview for </i>
-            <a href="https://s0upernova.github.io/tic-tac-toe" target={'_blank'}>Tic-Tac-Toe: Jaggy Edition</a>
-          </p>
-          <figure className={`${styles.box} ${styles.figure}`}>
-            <iframe
-              loading="lazy"
-              title='Tic-Tac-Toe'
-              className={styles.frame}
-              src="https://s0upernova.github.io/tic-tac-toe">
-            </iframe>
-          </figure>
-          <section className={styles.section}>
-            <TypedText timeout={500} duration={500} curserStyle={"blink"} tag="h2">
-              About this project
-            </TypedText>
-            <TypedText timeout={1500} duration={2000} curserStyle={"blink"} tag="p">
-              This was made using react, and started with useState for state management,
-              but later converted it to useReducer
-            </TypedText>
-          </section>
-          <aside className={styles.aside}>
-            <TypedText timeout={4000} duration={800} curserStyle={"blink"} tag="h2">
-              A few superfluous details
-            </TypedText>
-            <TypedText timeout={5000} duration={2000} curserStyle={"blink"} tag="p">
-              This started as an off the cuff hey id be interesting if such and such, and turned out
-              pretty well I think
-            </TypedText>
-          </aside>
-          <p className={styles.link}>
-            <i>You can check out the source code on </i>
-            <a href="https://github.com/S0UPernova/tic-tac-toe" target={'_blank'}>GitHub</a>
-          </p>
-        </article>
-
-        {/*//* Raycasting */}
-        <article className={styles.article}>
-          <p className={styles.preview}>
-            <i>This is a live preview for </i>
-            <a href="https://s0upernova.github.io/raycasting" target={'_blank'}>Raycasting</a>
-          </p>
-          <figure className={`${styles.box} ${styles.figure}`}>
-            <iframe
-              loading="lazy"
-              title='Raycasting'
-              className={styles.frame}
-              src="https://s0upernova.github.io/raycasting">
-            </iframe>
-          </figure>
-          <section className={styles.section}>
-            <TypedText timeout={500} duration={500} curserStyle={"blink"} tag="h2">
-              About this project
-            </TypedText>
-            <TypedText timeout={1500} duration={3500} curserStyle={"blink"} tag="p">
-              This was made using typescript while following a tutorial in plain javascript,
-              they used a library that I had trouble using,
-              so I ended up needing to make some functions myself
-            </TypedText>
-            <TypedText timeout={5000} duration={500} curserStyle={"blink"} tag="h3">
-              Here are a few examles
-            </TypedText>
-            <ul className={styles.list}>
-              <TypedText timeout={6000} duration={500} curserStyle={"blink"} tag="li">
-                getting the distance between two points
-              </TypedText>
-              <TypedText timeout={7000} duration={500} curserStyle={"blink"} tag="li">
-                converting degrees to radians
-              </TypedText>
-            </ul>
-          </section>
-          <aside className={styles.aside}>
-            <TypedText timeout={8000} duration={800} curserStyle={"blink"} tag="h2">
-              A few superfluous details
-            </TypedText>
-            <TypedText timeout={9000} duration={4000} curserStyle={"blink"} tag="p">
-              though it wasn't in the tutorial I also made a function to draw the
-              parts of the wall between the points that hit it,
-              instead of the whole wall if any hit,
-              though there is the issue that it does not draw the walls between
-              those rays if they don't hit the same wall
-            </TypedText>
-          </aside>
-          <p className={styles.link}>
-            <i>You can check out the source code on </i>
-            <a href="https://github.com/S0UPernova/raycasting" target={'_blank'}>GitHub</a>
-          </p>
-        </article>
-
-        {/* //* Todo-App && Todo-Api */}
-        <article className={styles.article}>
-          <p className={styles.preview}>
-            <i>This is a live preview for </i>
-            <a href="https://todo-app.me" target={'_blank'}>Todo-App</a>
-          </p>
-          <figure className={`${styles.box} ${styles.figure}`}>
-            {/* // todo get cookies working in this */}
-            <iframe
-              loading="lazy"
-              title='Todo-App'
-              className={styles.frame}
-              src="https://todo-app.me">
-            </iframe>
-          </figure>
-          <section className={styles.section}>
-            <TypedText timeout={500} duration={500} curserStyle={"blink"} tag="h3">
-              About this project
-            </TypedText>
-            <TypedText timeout={1500} duration={3500} curserStyle={"blink"} tag="p">
-              FYI: login does not work in the preview, because the cookie does not get set.
-              the frontend is in react, and the backend is an api made with Ruby on Rails
-            </TypedText>
-            <TypedText timeout={5000} duration={500} curserStyle={"blink"} tag="h3">
-              Here are a few highlights
-            </TypedText>
-            <ul className={styles.list}>
-              <TypedText timeout={6000} duration={500} curserStyle={"blink"} tag="li">
-                the api is on an aws ec2 instance
-              </TypedText>
-              <TypedText timeout={7000} duration={500} curserStyle={"blink"} tag="li">
-                the frontend is on aws amplify with ci/cd
-              </TypedText>
-            </ul>
-          </section>
-          <aside className={styles.aside}>
-            <TypedText timeout={8000} duration={800} curserStyle={"blink"} tag="h2">
-              A few superfluous details
-            </TypedText>
-            <TypedText timeout={9000} duration={4000} curserStyle={"blink"} tag="p">
-              This application presented quite a few challenges,
-              which were a good learning experience.
-              For instance this was the first time I deployed a rails app without it being on heroku,
-              and the saying rang pretty true,
-              that one of the hardest things to do with ruby on rails is installing it.
-            </TypedText>
-          </aside>
-          <p className={styles.link}>
-            <i>You can check out the source code </i>
-            <a href="https://github.com/S0UPernova/todo_app" target={'_blank'}>Frontend</a>,
-            {" "}
-            <a href="https://github.com/S0UPernova/todo_api" target={'_blank'}>Backend</a>
-          </p>
-        </article>
-      </main>
-    </div>
-
+      {/*// todo work on talking points and wording, and make sure to spellcheck */}
+      <TypedText tag={"h1"} timeout={500} duration={200} className={styles.greeting}>
+        Hello
+      </TypedText>
+      <article className={styles.article}>
+        <section className={`${styles.section} ${styles.sectionOne}`}>
+          <TypedText tag={"h2"} timeout={1000} duration={500}>
+            I suppose that i should tell you a little about myself.
+          </TypedText>
+          <TypedText tag={"p"} timeout={2000} duration={2000}>
+            I am a self taught web developer,
+            though i have gone through some of the freeCodeCamp courses,
+            and earned a few of the certifications,
+            and have also also worked through a couple of books including
+            The Ruby on Rails Tutorial by Michael Hartl - 6th Edition
+          </TypedText>
+          <TypedText tag={"p"} timeout={4500} duration={2500}>
+            With the knowledge that gave me I gave making a rails api a shot,
+            and since making APIs were not covered I thought it would be a good learning experience,
+            which it was,
+            though if I were to do it again I might try to use devise so that I can get up and running faster,
+            because setting up users from scratch is a lot of work for a personal project that noone will actually use.
+            For the frontend I went with react which I have been working on improving with.
+          </TypedText>
+        </section>
+        <section className={`${styles.section} ${styles.sectionTwo}`}>
+          <TypedText tag={"h2"} timeout={8000} duration={500}>
+            Been gaining some experience with collaborative coding lately
+          </TypedText>
+          <TypedText tag={"p"} timeout={9000} duration={2500}>
+            I have been working with a coding group weekly collaborating on discord,
+            and often using the liveshare extension on vs code
+            so that we can all work on things at the same time,
+            and see instant feedback by sharing the localhost server which allows rapid
+            prototyping of ideas, and we are able to get feedback from the rest of the team,
+            as well as assistance building solutions,
+            several times we have had one person making a component,
+            then another person having seen that gets started on the implementation.
+          </TypedText>
+          <TypedText tag={"p"} timeout={13000} duration={2000}>
+            Working with other developers is great for learning,
+            and it took me quite some time to finaly start working with others,
+            but things have been going well, and I have been learning quite a bit,
+            as well as teach a few others which has helped solidify
+            knowledge in some areas.
+          </TypedText>
+        </section>
+        <section className={`${styles.section} ${styles.sectionThree}`}>
+          <TypedText tag={"h2"} timeout={15500} duration={500}>
+            Motivation and goals
+          </TypedText>
+          <TypedText tag={"p"} timeout={16500} duration={2000}>
+            I was working on the career change anyway, because I am more interested in a career in tech,
+            but developments in my personal life have made an on-site job unsustainable,
+            so I have been working on being able to work remotely.
+          </TypedText>
+          <TypedText tag={"p"} timeout={19000} duration={2000}>
+            Although I have had an interest in learing programming I didn't commit until January 2021,
+            I have hit some bumps in the road in my journey, but I have persisted,
+            and intend to keep improving,
+            because I am always looking to get better at the things that I do,
+            doing them faster, better, more efficiently.
+          </TypedText>
+        </section>
+        <aside className={`${styles.aside} ${styles.asideOne}`}>
+          <TypedText tag={"h2"} timeout={21500} duration={1000}>
+            It has been an interesting journey thus far,
+            and I am eager to see what comes next
+          </TypedText>
+          <TypedText tag={"p"} timeout={23000} duration={3000}>
+            I have much to learn still, but that will never change there is always so much to learn,
+            and you can't know everything, but with enough determination you can surprize yourself with what
+            you can achieve,
+            coming from very little understanding of programming to where I am now has been a lot of work,
+            though I feel that it is always worth impoving yourself,
+            your skills and knowledge, because it always pays dividends
+          </TypedText>
+        </aside>
+      </article>
+    </>
   )
 }

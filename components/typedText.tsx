@@ -1,4 +1,4 @@
-import React, { useState, useEffect, memo, createRef, useRef, ElementType, HTMLAttributes, FC } from "react"
+import React, { useState, useEffect, memo, useRef, ElementType, HTMLAttributes } from "react"
 import { useIsVisible } from "../hooks/useIsVisible"
 import styles from './typedText.module.scss'
 
@@ -10,7 +10,8 @@ interface IInputParams extends HTMLAttributes<HTMLOrSVGElement> {
   placeHolder?: string | false,
   curserStyle?: "none" | "static" | "blink"
   curser?: string,
-  tag?: ElementType
+  tag?: ElementType,
+  className?: string
 }
 
 //todo add option to allow placeholder to be replaced like using insert replacing one char at a time,
@@ -24,7 +25,8 @@ function TypedText({
   curser = "|",
   curserStyle = "static",
   duration,
-  tag: Tag = "span"
+  tag: Tag = "span",
+  className = ""
 }: IInputParams): JSX.Element {
   // todo maybe figure out how make this to not be any
   const ref = useRef<any>(null);
@@ -32,13 +34,12 @@ function TypedText({
   const [revealedLetters, setRevealedLetters] = useState(0)
   const [showCurser, setShowCurser] = useState(false)
   const [hasBeenSeen, setHasBeenSeen] = useState(false)
-  const dur = duration ? duration / children.length : null
+  const totalDuration = duration ? duration / children.length : null
 
   useEffect(() => {
     let interval: NodeJS.Timer
     const setter = () => {
       if (revealedLetters <= children.length) {
-        console.log(`count is ${revealedLetters}`)
         setRevealedLetters(l => l + 1)
       }
     }
@@ -49,20 +50,20 @@ function TypedText({
         }
         interval = setInterval(() => {
           setter()
-        }, dur ? dur : delay)
+        }, totalDuration ? totalDuration : delay)
       }, timeout)
 
     } else if (hasBeenSeen && revealedLetters < children.length) {
       interval = setInterval(() => {
         setter()
-      }, dur ? dur : delay)
+      }, totalDuration ? totalDuration : delay)
     }
 
     return () => clearInterval(interval)
-  }, [hasBeenSeen, revealedLetters]) // seems to need revealedLetters to have updated state for the logic
+  }, [hasBeenSeen, revealedLetters])
 
   return (
-    <Tag ref={ref}>
+    <Tag ref={ref} className={className}>
       {`${isVisible && !hasBeenSeen ? setHasBeenSeen(true) : ""}`}
       {`${revealedLetters === 0 && placeHolder != false ? `${placeHolder}` : ""}`}
       {`${children.substring(0, revealedLetters)}`}
