@@ -2,48 +2,26 @@
   max-width: 80ch;
   margin-left: auto;
   margin-right: auto;
-  
-  // display: grid;
-  // grid-template-columns: 1fr 1fr;
-  // grid-template-rows: auto;
-  // grid-template-areas: 
-  // 'emailLabel emailInput'
-  // 'subjectLabel subjectInput'
-  // 'messageLabel messageInput'
-  // 'submit .'
-  // ;
-}
-// .labelEmail {
-//   grid-area: emailLabel;
-//   // margin-left: auto;
-// }
-// .labelSubject {
-//   grid-area: subjectLabel;
-// }
-// .labelMessage {
-//   grid-area: messageLabel;
-// }
-.inputEmail {
-  width: 100%;
-  font-size: 1rem;
-  margin-top: .2rem;
-  margin-bottom: 1rem;
-}
-.inputSubject {
-  width: 100%;
-  font-size: 1rem;
-  margin-top: .2rem;
-  margin-bottom: 1rem;
-
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  label {
+    input, textarea {
+      width: 100%;
+      font-size: 1rem;
+      margin-top: .2rem;
+      margin-bottom: 1rem;
+      padding: .5rem;
+    }
+  }
 }
 .inputMessage {
-  width: 100%;
-  font-size: 1rem;
   resize: vertical;
-  margin-top: .2rem;
-  margin-bottom: 1rem;
 }
+
 .submit {
-  padding: .2rem;
+  padding: .4rem;
+  justify-self: end;
+  font-size: 1.2rem;
   // width: 5rem;
 }
