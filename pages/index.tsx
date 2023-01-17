@@ -1,6 +1,6 @@
-import Head from 'next/head'
+import Head from "next/head"
 import TypedText from "../components/typedText"
-import styles from '../styles/home.module.scss'
+import styles from "../styles/home.module.scss"
 export default function Home() {
   return (
     <>
@@ -66,7 +66,7 @@ export default function Home() {
             so I have been working on being able to work remotely.
           </TypedText>
           <TypedText tag={"p"} timeout={19000} duration={2000}>
-            Although I have had an interest in learing programming I didn't commit until January 2021,
+            Although I have had an interest in learing programming I didn&apos;t commit until January 2021,
             I have hit some bumps in the road in my journey, but I have persisted,
             and intend to keep improving,
             because I am always looking to get better at the things that I do,
@@ -80,7 +80,7 @@ export default function Home() {
           </TypedText>
           <TypedText tag={"p"} timeout={23000} duration={3000}>
             I have much to learn still, but that will never change there is always so much to learn,
-            and you can't know everything, but with enough determination you can surprize yourself with what
+            and you can&apos;t know everything, but with enough determination you can surprize yourself with what
             you can achieve,
             coming from very little understanding of programming to where I am now has been a lot of work,
             though I feel that it is always worth impoving yourself,

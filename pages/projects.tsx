@@ -106,7 +106,7 @@ export default function Projects() {
         <article className={styles.article}>
           <p className={styles.preview}>
             <i>This is a live preview for </i>
-            <a href="https://todo-app.me" target={"_blank"}>Todo-App</a>
+            <a href="https://todo-app.me">Todo-App</a>
           </p>
           <figure className={`${styles.box} ${styles.figure}`}>
             {/* // todo get cookies working in this */}
