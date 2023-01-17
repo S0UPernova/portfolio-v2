@@ -2,6 +2,7 @@
 import { FormEvent, useState } from "react"
 import emailjs from '@emailjs/browser'
 import styles from '../styles/contact.module.scss'
+import Head from "next/head"
 interface contactProps {
   EMAILJS_SERVICE: string,
   EMAILJS_TEMPLATE: string,
@@ -28,15 +29,11 @@ export default function Contact(props: contactProps) {
         break
     }
   }
-  // todo finish this and maybe use emailjs
-  // const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
   const handleSubmit = (e: any): void => {
     e.preventDefault()
-    // emailjs.init(process.env.EMAILJS_PUBLIC_KEY)
     emailjs.sendForm(props.EMAILJS_SERVICE, props.EMAILJS_TEMPLATE, e.target, props.EMAILJS_PUBLIC_KEY)
       .then((result: any) => {
         alert("Your message has been sent")
-        // console.log(result.text);
       }, (error: any) => {
         console.log(error.text)
       })
@@ -47,6 +44,9 @@ export default function Contact(props: contactProps) {
   }
   return (
     <>
+    <Head>
+        <title>Michael Kielpinski - Contact</title>
+    </Head>
       <form onSubmit={handleSubmit} className={styles.form}>
         <label>
           Name:
@@ -94,7 +94,7 @@ export default function Contact(props: contactProps) {
   )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   return {
     props: {
       EMAILJS_SERVICE: process.env.EMAILJS_SERVICE,

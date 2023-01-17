@@ -5,7 +5,6 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Michael Kielpinski - Home</title>
         <meta name="description" content="Michael Kielpinski Portfolio site homepage" />
         <link rel="icon" href="/favicon.ico" /> {/* // todo add custom icon */}
       </Head>

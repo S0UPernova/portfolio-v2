@@ -11,6 +11,7 @@ export default function Projects() {
       </Head>
       <main className={styles.main}>
 
+        {/* //? make these image carousels maybe */}
         {/* //* Tic-Tac-Toe */}
         <article className={styles.article}>
           <p className={styles.preview}>

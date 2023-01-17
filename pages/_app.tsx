@@ -17,9 +17,9 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Michael Kielpinski - Portfolio</title>
-        <meta name="description" content="Michael Kielpinski Portfolio site homepage" />
-        <link rel="icon" href="/favicon.ico" /> {/* // todo add custom icon */}
+        <title>Michael Kielpinski</title>
+        <meta name="description" content="Michael Kielpinski Portfolio site" />
+        <link rel="icon" href="/favicon.svg" /> {/* // todo add custom icon */}
       </Head>
       <nav>
         <Link href={'/'} className={`${testPath('/') ? 'active' : null}`}>Home</Link>
