@@ -1,6 +1,6 @@
-import Head from 'next/head'
+import Head from "next/head"
 import TypedText from "../components/typedText"
-import styles from '../styles/projects.module.scss'
+import styles from "../styles/projects.module.scss"
 export default function Projects() {
   return (
     <>
@@ -15,12 +15,12 @@ export default function Projects() {
         <article className={styles.article}>
           <p className={styles.preview}>
             <i>This is a live preview for </i>
-            <a href="https://s0upernova.github.io/tic-tac-toe" target={'_blank'}>Tic-Tac-Toe: Jaggy Edition</a>
+            <a href="https://s0upernova.github.io/tic-tac-toe" target={"_blank"} rel="noreferrer">Tic-Tac-Toe: Jaggy Edition</a>
           </p>
           <figure className={`${styles.box} ${styles.figure}`}>
             <iframe
               loading="lazy"
-              title='Tic-Tac-Toe'
+              title="Tic-Tac-Toe"
               className={styles.frame}
               src="https://s0upernova.github.io/tic-tac-toe">
             </iframe>
@@ -45,7 +45,7 @@ export default function Projects() {
           </aside>
           <p className={styles.link}>
             <i>You can check out the source code on </i>
-            <a href="https://github.com/S0UPernova/tic-tac-toe" target={'_blank'}>GitHub</a>
+            <a href="https://github.com/S0UPernova/tic-tac-toe" target={"_blank"} rel="noreferrer">GitHub</a>
           </p>
         </article>
 
@@ -53,12 +53,12 @@ export default function Projects() {
         <article className={styles.article}>
           <p className={styles.preview}>
             <i>This is a live preview for </i>
-            <a href="https://s0upernova.github.io/raycasting" target={'_blank'}>Raycasting</a>
+            <a href="https://s0upernova.github.io/raycasting" target={"_blank"} rel="noreferrer">Raycasting</a>
           </p>
           <figure className={`${styles.box} ${styles.figure}`}>
             <iframe
               loading="lazy"
-              title='Raycasting'
+              title="Raycasting"
               className={styles.frame}
               src="https://s0upernova.github.io/raycasting">
             </iframe>
@@ -89,16 +89,16 @@ export default function Projects() {
               A few superfluous details
             </TypedText>
             <TypedText timeout={9000} duration={4000} curserStyle={"blink"} tag="p">
-              though it wasn't in the tutorial I also made a function to draw the
+              though it wasn&apos;t in the tutorial I also made a function to draw the
               parts of the wall between the points that hit it,
               instead of the whole wall if any hit,
               though there is the issue that it does not draw the walls between
-              those rays if they don't hit the same wall.
+              those rays if they don&apos;t hit the same wall.
             </TypedText>
           </aside>
           <p className={styles.link}>
             <i>You can check out the source code on </i>
-            <a href="https://github.com/S0UPernova/raycasting" target={'_blank'}>GitHub</a>
+            <a href="https://github.com/S0UPernova/raycasting" target={"_blank"} rel="noreferrer">GitHub</a>
           </p>
         </article>
 
@@ -106,13 +106,13 @@ export default function Projects() {
         <article className={styles.article}>
           <p className={styles.preview}>
             <i>This is a live preview for </i>
-            <a href="https://todo-app.me" target={'_blank'}>Todo-App</a>
+            <a href="https://todo-app.me" target={"_blank"}>Todo-App</a>
           </p>
           <figure className={`${styles.box} ${styles.figure}`}>
             {/* // todo get cookies working in this */}
             <iframe
               loading="lazy"
-              title='Todo-App'
+              title="Todo-App"
               className={styles.frame}
               src="https://todo-app.me">
             </iframe>
@@ -151,9 +151,9 @@ export default function Projects() {
           </aside>
           <p className={styles.link}>
             <i>You can check out the source code </i>
-            <a href="https://github.com/S0UPernova/todo_app" target={'_blank'}>Frontend</a>,
+            <a href="https://github.com/S0UPernova/todo_app" target={"_blank"} rel="noreferrer">Frontend</a>,
             {" "}
-            <a href="https://github.com/S0UPernova/todo_api" target={'_blank'}>Backend</a>
+            <a href="https://github.com/S0UPernova/todo_api" target={"_blank"} rel="noreferrer">Backend</a>
           </p>
         </article>
       </main>

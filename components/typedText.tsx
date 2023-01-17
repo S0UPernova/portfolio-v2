@@ -1,3 +1,4 @@
+import { time } from "console"
 import React, { useState, useEffect, memo, useRef, ElementType, HTMLAttributes } from "react"
 import { useIsVisible } from "../hooks/useIsVisible"
 import styles from './typedText.module.scss'
@@ -60,7 +61,7 @@ function TypedText({
     }
 
     return () => clearInterval(interval)
-  }, [hasBeenSeen, revealedLetters])
+  }, [hasBeenSeen, revealedLetters, children.length, curserStyle, delay, timeout, totalDuration])
 
   return (
     <Tag ref={ref} className={className}>
