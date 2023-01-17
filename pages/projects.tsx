@@ -15,7 +15,7 @@ export default function Projects() {
         <article className={styles.article}>
           <p className={styles.preview}>
             <i>This is a live preview for </i>
-            <a href="https://s0upernova.github.io/tic-tac-toe" target={"_blank"} rel="noreferrer">Tic-Tac-Toe: Jaggy Edition</a>
+            <a href="https://s0upernova.github.io/tic-tac-toe">Tic-Tac-Toe: Jaggy Edition</a>
           </p>
           <figure className={`${styles.box} ${styles.figure}`}>
             <iframe
@@ -45,7 +45,7 @@ export default function Projects() {
           </aside>
           <p className={styles.link}>
             <i>You can check out the source code on </i>
-            <a href="https://github.com/S0UPernova/tic-tac-toe" target={"_blank"} rel="noreferrer">GitHub</a>
+            <a href="https://github.com/S0UPernova/tic-tac-toe">GitHub</a>
           </p>
         </article>
 
@@ -53,7 +53,7 @@ export default function Projects() {
         <article className={styles.article}>
           <p className={styles.preview}>
             <i>This is a live preview for </i>
-            <a href="https://s0upernova.github.io/raycasting" target={"_blank"} rel="noreferrer">Raycasting</a>
+            <a href="https://s0upernova.github.io/raycasting">Raycasting</a>
           </p>
           <figure className={`${styles.box} ${styles.figure}`}>
             <iframe
@@ -98,7 +98,7 @@ export default function Projects() {
           </aside>
           <p className={styles.link}>
             <i>You can check out the source code on </i>
-            <a href="https://github.com/S0UPernova/raycasting" target={"_blank"} rel="noreferrer">GitHub</a>
+            <a href="https://github.com/S0UPernova/raycasting">GitHub</a>
           </p>
         </article>
 
@@ -151,9 +151,9 @@ export default function Projects() {
           </aside>
           <p className={styles.link}>
             <i>You can check out the source code </i>
-            <a href="https://github.com/S0UPernova/todo_app" target={"_blank"} rel="noreferrer">Frontend</a>,
+            <a href="https://github.com/S0UPernova/todo_app">Frontend</a>,
             {" "}
-            <a href="https://github.com/S0UPernova/todo_api" target={"_blank"} rel="noreferrer">Backend</a>
+            <a href="https://github.com/S0UPernova/todo_api">Backend</a>
           </p>
         </article>
       </main>
